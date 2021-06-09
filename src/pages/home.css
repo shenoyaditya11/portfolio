@@ -1,0 +1,54 @@
+.centered-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5em;
+}
+
+.mypage-home{
+    height: 95vh;
+
+}
+
+.typewritter{
+    width: auto;
+    overflow: hidden; /* Ensures the content is not revealed until the animation *//* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+
+@media  only screen and (max-width:600px) {
+
+  
+    h1{
+        font-size: 1.25em;
+        padding:0.25em;
+    }
+    h2{
+        font-size: 1em;
+    }
+    h3{
+        font-size: 0.75em;
+    }
+    .typewritter{
+        width: auto;
+        overflow: hidden; /* Ensures the content is not revealed until the animation *//* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        animation: 
+        typing 2s steps(40, end),
+        blink-caret .75s step-end;
+    }
+
+    
+}
+  

@@ -1,0 +1,242 @@
+
+   
+  .input:focus + label  {
+    position: absolute;
+    top: 0;
+    font-size: 30px;
+    margin: 10px;
+    padding: 0 10px;
+    background-color: #f05855;
+    -webkit-transition: top .2s ease-in-out,  font-size .2s ease-in-out;
+    transition: top .2s ease-in-out,  font-size .2s ease-in-t;
+  }
+  
+  input, textarea, .send{
+    margin-top:1em;
+    padding:0.5em 1em;
+    border: 1px solid #FF9F1C;
+    outline: none;
+    border-radius: 5px;
+    font-size: medium;
+    font-weight: 400;
+    background-color: transparent;
+    color: #FF9F1C ;
+  }
+
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0 0;
+    margin-top: 5vh;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex: 1;
+    margin:0;
+    width: 100%;
+}
+
+textarea{
+  height: 20vh ;
+}
+
+.body{
+    display: flex;
+    width: 100%;
+    padding: 0 5%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.full-width{
+    width: 100%;
+}
+
+.button-row{
+    justify-content: center;
+}
+
+.half-width{
+  width: 48%;
+
+}
+
+.left-button{
+  border: thin blue;
+  border-radius: 5rem;
+  cursor: pointer;
+  width: auto;
+  margin-left: 90%;
+  
+
+}
+
+
+.footer{
+  font-size: 1.25em;
+  font-weight: 700;
+  max-width: 75%;
+  font-family: 'Saira Semi Condensed';
+  margin-bottom: 0;
+}
+
+.spaced{
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+}
+
+.top-spaced{
+  padding-top:01%;
+  padding-bottom: 0.5em;
+}
+.v-centered{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.contact-icon{
+  font-size: 2.5em;
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+}
+
+.contact-icon:hover{
+  color:#FF9F1C;
+
+}
+
+.padded-bottom{ 
+  visibility: visible;
+  position: relative;
+  bottom: 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+  .body{
+    display: flex;
+    width: 100%;
+    padding-top: 2em;
+    flex-direction: column;
+    margin-top: 5vh;
+  }
+  
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0;
+  }
+
+  .form-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    margin:0;
+    width: 100%;
+}
+
+.half-width{
+  width: 48%;
+
+}
+
+  .footer{
+    font-size: 1em;
+    font-weight: 700;
+    max-width: 100%;
+    font-family: 'Saira Semi Condensed'
+  }
+
+  .spaced{
+    font-size: 1.5em;
+    padding-inline-start: 0.5em;
+    
+  }
+
+  input{
+    overflow: scroll;
+  }
+
+  .input:focus + label{
+      margin-top: 1rem;
+  }
+
+   
+  input, textarea, .send{
+    margin-top:0.5em;
+    font-size: medium;
+    font-weight: 400;
+    background-color: transparent;
+    color: #FF9F1C ;
+  }
+
+  
+
+}
+
+
+@media only screen and (max-height: 800px){
+
+  .spaced{
+    font-size: 1.3em;
+    padding-inline-start: 0.5em;
+    
+  }
+  .form-row{
+    padding-right: 1em;
+    padding-left: 1em;
+    margin:0;
+  }
+
+  input, textarea, .send{
+    margin-top:0.5em;
+    font-size: medium;
+    font-weight: 400;
+    background-color: transparent;
+    color: #FF9F1C ;
+  }
+}
+
+@media only screen and (max-width: 600px){
+
+  .spaced{
+    font-size: 1.3em;
+    padding-inline-start: 0.5em;
+    
+  }
+  .form-row{
+    display: flex;
+    flex-direction: column;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin:0;
+  }
+
+  input, textarea, .send{
+    margin-top:0.5em;
+    font-size: medium;
+    font-weight: 100;
+    width: 100%;
+    background-color: transparent;
+    color: #FF9F1C ;
+  }
+
+  .half-width{
+    width: 100%;
+
+}
+}

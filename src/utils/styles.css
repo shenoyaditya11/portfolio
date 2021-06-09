@@ -1,0 +1,246 @@
+
+
+.background{
+    background-color: #282846;
+    color: white;
+
+}
+
+.page-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 10vh;
+
+}
+
+
+.h-centered{
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.r-aligned{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 0;
+    padding-right: 1em;
+    width:100%
+}
+
+.absolute{
+    
+    position: absolute;
+    
+}
+.design{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.row-flex{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+   
+}
+
+.col-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mypage{
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 10vh;
+    height: 100vh;
+}
+
+.mypage-about{
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: column;
+    padding-top: 10vh;
+    height: auto;
+}
+
+
+.mypage-work{
+    display: flex;
+    overflow-y: hidden;
+    flex-direction: column;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    height: auto;
+}
+
+.logo{
+    border: thick solid #FF9F1C;
+    padding: 2px;
+    color: #FF9F1C;
+}
+
+
+
+.page-icon{
+    color:white;
+    font-size:2.5em;
+    padding: 0.25em
+}
+
+.v-centered{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.left-content{
+    display: flex;
+    justify-content: left;
+    padding-left: 1em;
+}
+
+.bottom{
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    margin:0;
+    height: auto;
+    width: 100%;
+}
+
+.centered{
+    display: flex;
+    justify-content: center; 
+}
+
+.colored{
+    color: #FF9F1C;
+}
+
+.header{
+    text-align: center;
+    height: auto;
+    font-size: 2.5rem;
+    font-style: bold;
+    color: #FF9F1C;
+}
+
+
+
+.page-container{
+    padding-left: 1vw;
+    margin-left:0;
+    margin-right:0;
+    width: 100%;
+    padding-top:3vh;
+}
+
+.description_div{
+    width: 50%;
+  }
+  
+  .description{
+    font-weight: 500;
+    font-style: italic;
+    font-size: medium;
+    font-family: 'Saira Semi Condensed';
+  }
+
+
+@media only screen and (max-width: 1000px) {
+
+   
+
+    body{
+        background-color: #282846;
+    }
+
+    .row-flex{
+    
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+       
+    }
+
+    .description_div{
+        width: 100%;
+      }
+
+    .description{
+        padding-inline-start: 0.5em;
+        font-size: 1.5em;
+        font-weight: 800;
+        max-width: 100%;
+        font-family: 'Saira Semi Condensed'
+      }
+      
+
+}
+
+@media only screen and (max-height: 800px) and (max-width : 1000px) {
+    .bottom{
+
+        z-index: 0;
+        position: relative;
+        bottom: 0;
+        margin:0;
+        height: auto;
+        width: 100%;
+    }
+
+    .mypage-work{
+        height: auto;
+    }
+
+   
+}
+
+@media only screen and (max-height: 800px){
+.description{
+    padding-inline-start: 0.5em;
+    font-size: 1.25em;
+    font-weight: 800;
+    max-width: 100%;
+    font-family: 'Saira Semi Condensed'
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .bottom{
+
+        z-index: 0;
+        position: relative;
+        bottom: 0;
+        margin:0;
+        height: auto;
+        width: 100%;
+    }
+
+    body{
+        background-color: #282846;
+    }
+
+    .r-aligned{
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .mypage{
+        padding-top: 5vh;
+    }
+    
+}
+
+

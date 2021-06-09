@@ -1,0 +1,9 @@
+.card-icon{
+    font-size: 5em;
+    padding-inline-start: 0.5em;
+    padding-inline-end: 0.5em;
+}
+
+.card-icon:hover{
+    color:#FF9F1C;
+}

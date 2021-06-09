@@ -1,0 +1,161 @@
+
+
+p{
+    text-align: left;
+    
+}
+
+.top-spaced{
+    margin-top: 2%;
+}
+
+.img{
+    width: 350px;
+    height: 350px;
+    padding: auto;
+    justify-self: center;
+    border-radius: 10px;
+    object-fit: cover;
+    
+}
+
+
+
+.text-content{
+    width:75%;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.25rem;
+    font-family: 'Saira Semi Condensed';
+}
+
+#image-holder{
+    position: absolute;
+}
+.col-left{
+    width:70%;
+    height: auto;
+    padding-left: 1vw;
+}
+
+.col-right{
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+
+.content-row-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 2% 2%;
+    margin-top:0;
+    height: auto;
+    
+}
+
+
+
+.container-about{
+    padding-left: 1vw;
+    margin-left:0;
+    margin-right:0;
+    width: 100%;
+    padding-top:3vh;
+    
+}
+
+.center{
+    height: auto ;
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    .content-row-flex{
+        display: flex;
+        flex-direction: column;
+        padding: 2% 2%;
+    }
+    
+    .text-content{
+        width:100%;
+        font-weight: 500;
+        font-style: italic;
+        font-size: medium;
+        font-family: 'Saira Semi Condensed';
+    }
+
+    .col-right{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #pic-holder{
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        height: fit-content;
+        margin:0;
+        padding: 0;
+    
+    }
+
+    .img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+   
+    .col-left{
+        height: auto;
+        width:100%;
+        padding-left: 1vw;
+    }
+
+    .center{
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .col-right{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #pic-holder{
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: fit-content;
+        margin:0;
+        padding: 0;
+    
+    }
+
+    .img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+}
