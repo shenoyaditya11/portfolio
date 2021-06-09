@@ -130,15 +130,18 @@ export const Work = ()=>{
  
 
 
-    return loading===true?( <Spinner 
-        style={{'margin-top':'25%'}}
-        as="span"
-        animation="border"
-        variant="warning"
-        role="status"
-        aria-hidden="true"
+    return loading===true?(
+        <div className='h-centered'>
+         <Spinner 
+            style={{'margin-top':'25%'}}
+            as="span"
+            animation="border"
+            variant="warning"
+            role="status"
+            aria-hidden="true"
         
-      />) : (
+        />
+      </div>) : (
         <div className ="mypage mypage-work" id="work" ref={viewRef}>
                 <h2 className="header">Projects</h2>
                 <motion.div variants={staggeredVariant}
