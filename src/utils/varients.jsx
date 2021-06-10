@@ -29,6 +29,11 @@ export const navItemVariant = {
   },
 };
 
+
+export const popIn ={
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, type:'easeIn'} },
+}
 export const slideVariant = {
   hidden: { opacity: 0, y: 1500 },
   visible: { opacity: 1, y: 0, transition: { duration: 2, type:'spring'} },

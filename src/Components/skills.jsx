@@ -2,8 +2,8 @@ import 'utils/styles.css'
 import {JAVA, CPP, PYTHON, REACT, ANDROID, C, HTML, CSS } from 'utils/icon'
 import {useInView} from 'react-intersection-observer'
 import {useEffect} from 'react'
-import {leftVariant, rightVariant}  from 'utils/varients'
-
+import {staggeredVariant, popIn}  from 'utils/varients'
+import {motion, useAnimation} from 'framer-motion'
 
 
 
@@ -19,21 +19,34 @@ export const Skills = ()=>{
         justifyContent:'center',
     }
 
+    const animation = useAnimation();
+    const [viewRef, inView] = useInView({
+        threshold: .5,
+    });
+
+    useEffect(() => {
+        if (inView) {
+        animation.start('visible');
+        }
+    }, [animation, inView]);
+
+
     return (
-        <div className="background">
+        <div className="background" ref={viewRef}>
                
                     <h2 className='header'>Technical Skills</h2>
                 
-                    <section style={iconHolder}>
-                        <JAVA/>
-                        <CPP/>
-                        <C/>
-                        <ANDROID/>
-                        <PYTHON/>
-                        <REACT/>
-                        <HTML/>
-                        <CSS/>
-                    </section>
+                    <motion.section  initial='hidden' animate={animation} variants={staggeredVariant} style={iconHolder}>
+                        <motion.span variants={staggeredVariant} ><JAVA/></motion.span>
+                        
+                        <motion.span variants={popIn}><CPP/></motion.span>
+                        <motion.span variants={popIn}><C/></motion.span>
+                        <motion.span variants={popIn}><ANDROID/></motion.span>
+                        <motion.span variants={popIn}><PYTHON/></motion.span>
+                        <motion.span variants={popIn}><REACT/></motion.span>
+                        <motion.span variants={popIn}><HTML/></motion.span>
+                        <motion.span variants={popIn}><CSS/></motion.span>
+                    </motion.section>
         </div>
     );
 }
