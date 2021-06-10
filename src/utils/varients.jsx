@@ -13,6 +13,24 @@ export const staggeredVariant = {
   }
 }
 
+export const textVarient = {
+  hidden:{opacity:0},
+  visible:{
+    opacity:1,
+    transition:{
+      delay:0.5,
+      staggerChildren:0.1
+    },
+  },
+}
+
+export const revealVarient = {
+  hidden:{opacity:0},
+  visible:{
+    opacity:1
+  },
+}
+
 
 
 export const navItemVariant = {
