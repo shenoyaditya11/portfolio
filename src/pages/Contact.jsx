@@ -3,7 +3,8 @@ import './contact.css'
 import {useState, useEffect} from 'react'
 import Form from 'react-bootstrap/Form'
 import {firestore} from 'utils/firebase'
-import {SubmittingModal} from 'Components/Modals'
+import {SubmittingModal, ErrorModal} from 'Components/Modals'
+import {Toast} from 'Components/Toast'
 import {motion, useAnimation} from 'framer-motion'
 import {navItemVariant} from 'utils/varients'
 import {animateScroll as scroll} from 'react-scroll'
@@ -16,6 +17,7 @@ export const Contact = ()=>{
 
 
     const [submitting, isSubmitting] = useState(false);
+    const [error, setError]  = useState(false)
    
 
     const animation = useAnimation();
@@ -49,7 +51,7 @@ export const Contact = ()=>{
 
         if(email.value.trim() === "")
         {
-            alert("We cant contact you if your email is not provided!!!!\n Please provide email and try again");
+            setError(true);
 
             return;
         }
@@ -90,6 +92,10 @@ export const Contact = ()=>{
              show={submitting}
              onHide = {()=> isSubmitting(false)}
             />
+             <Toast
+             show={error} header='ERROR' body='Fll all the details' onTimeout={()=>setError(false) } type='danger'
+            />
+            
             <div className="col-flex fullpage page-container" ref={viewRef}>
                 <div className="top-about-me header">
                         <h2>Reach Out to Me!</h2>
@@ -115,7 +121,9 @@ export const Contact = ()=>{
                             <textarea  id="query-holder" placeholder="Query"className="full-width"></textarea>
                         </div>
                         <div className="form-row button-row">
-                            <button text="send" className="send" onClick={()=>sendMail()}>Send <i class="fa fa-send" aria-hidden="true"></i></button>
+                            <motion.button text="send" className="send" onClick={()=>sendMail()} whileHover={
+                                 {boxShadow: '1px 3px #f05855'}
+                            }>Send <i class="fa fa-send" aria-hidden="true"></i></motion.button>
                         </div>
 
 
@@ -143,7 +151,7 @@ export const Contact = ()=>{
             
             </div>
            
-            
+           
         </div>
     );
 }
