@@ -1,0 +1,10 @@
+@keyframes slide-in 
+{
+    0%{
+     transform: skewX(25deg) translateX(500)
+    }
+
+    50%{
+            transform: skewX(0deg);
+    }
+}
