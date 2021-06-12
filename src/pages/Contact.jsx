@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react'
 import Form from 'react-bootstrap/Form'
 import {firestore} from 'utils/firebase'
 import {SubmittingModal, ErrorModal} from 'Components/Modals'
-import {Toast} from 'Components/Toast'
+import {Toast, CustomAlert} from 'Components/Toast'
 import {motion, useAnimation} from 'framer-motion'
 import {navItemVariant} from 'utils/varients'
 import {animateScroll as scroll} from 'react-scroll'
@@ -92,9 +92,12 @@ export const Contact = ()=>{
              show={submitting}
              onHide = {()=> isSubmitting(false)}
             />
-             <Toast
-             show={error} header='ERROR' body='Fll all the details' onTimeout={()=>setError(false) } type='danger' delay={5000}
-            />
+            
+            <CustomAlert show={error} variant="danger" onClose={() => setError(false)} dismissible>
+
+            </CustomAlert>
+                
+                  
             
             <div className="col-flex fullpage page-container" ref={viewRef}>
                 <div className="top-about-me header">

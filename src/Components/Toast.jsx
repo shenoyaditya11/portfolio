@@ -1,7 +1,28 @@
 import { Backdrop } from "@material-ui/core";
 import { useEffect, useState } from "react";
+import Alert from 'react-bootstrap/Alert'
 import './toast-styles.css'
 
+
+export const CustomAlert = (props) =>{
+
+
+    return  props.show === true ? (
+        <Alert {...props} style={{
+            zIndex:10
+        }}>
+            <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
+            <p style={{
+                width:'100%',
+                textAlign:'center'
+            }}>
+                Looks like some fileds are missing!
+            </p>
+        </Alert>
+    
+    ) : (<></>);
+
+}
 
 
 export const Toast = (props)=>{

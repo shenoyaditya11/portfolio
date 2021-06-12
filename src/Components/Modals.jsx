@@ -1,5 +1,6 @@
 import Modal from 'react-bootstrap/Modal'; 
-import Toast from 'react-bootstrap/Toast';
+import Spinner from 'react-bootstrap/Spinner';
+import 'utils/styles.css'
 
 
 
@@ -16,8 +17,17 @@ import Toast from 'react-bootstrap/Toast';
               Submitting
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <h4>Your Query is getting submitted</h4>
+          <Modal.Body style={{width:'100%'}}>
+          <div className='h-centered'>
+            <Spinner 
+                as="span"
+                animation="border"
+                variant="warning"
+                role="status"
+                aria-hidden="true"
+            
+            />
+          </div>
           </Modal.Body>
         </Modal>
       );
