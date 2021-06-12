@@ -1,6 +1,6 @@
 import { Backdrop } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import {motion, useAnimation} from 'framer-motion';
+import './toast-styles.css'
 
 
 
@@ -24,6 +24,7 @@ export const Toast = (props)=>{
 
 
 
+
     const toastStyle = {
         display: props.show === true? 'flex' : 'none',
         flexDirection:'column',
@@ -37,12 +38,10 @@ export const Toast = (props)=>{
         backgroundColor: props.type===undefined? type.warning : type[props.type],
         borderRadius:'10px',
         opacity:'0.9',
-        transition: 'transform .6s ease-in'
+        animation: props.show === true ? 'slide-in 1s ease-in' : ''
     }
 
-    const success = {
-        backgroundColor:'#5cb85c',
-    }
+    
 
 
 return(

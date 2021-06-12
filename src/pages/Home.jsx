@@ -63,7 +63,7 @@ export const Home = ()=>{
                     }
                  }>
                  <h1>I am</h1>
-                 <span style={{fontSize:'5rem', fontStyle:'italic'}} > 𝓐𝓭𝓲𝓽𝔂𝓪 𝓢𝓱𝓮𝓷𝓸𝔂</span>
+                 <span style={{fontSize:'3rem', fontStyle:'italic'}} > 𝓐𝓭𝓲𝓽𝔂𝓪 𝓢𝓱𝓮𝓷𝓸𝔂</span>
                  </motion.span>
                 <motion.div>
                     {

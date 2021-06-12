@@ -93,7 +93,7 @@ export const Contact = ()=>{
              onHide = {()=> isSubmitting(false)}
             />
              <Toast
-             show={error} header='ERROR' body='Fll all the details' onTimeout={()=>setError(false) } type='danger'
+             show={error} header='ERROR' body='Fll all the details' onTimeout={()=>setError(false) } type='danger' delay={5000}
             />
             
             <div className="col-flex fullpage page-container" ref={viewRef}>
