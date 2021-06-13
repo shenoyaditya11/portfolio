@@ -123,7 +123,7 @@ export const Contact = ()=>{
                         <div className="form-row">
                             <textarea  id="query-holder" placeholder="Query"className="full-width"></textarea>
                         </div>
-                        <div className="form-row button-row">
+                        <div className="form-row-send button-row">
                             <motion.button text="send" className="send" onClick={()=>sendMail()} whileHover={
                                  {boxShadow: '1px 3px #f05855'}
                             }>Send <i class="fa fa-send" aria-hidden="true"></i></motion.button>

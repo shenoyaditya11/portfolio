@@ -142,11 +142,21 @@ textarea{
   .form-row{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
     flex: 1;
     margin:0;
     width: 100%;
+}
+
+.form-row-send{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1;
+  margin:0;
+  width: 100%;
 }
 
 .half-width{
@@ -226,7 +236,7 @@ textarea{
     margin:0;
   }
 
-  input, textarea, .send{
+  input, textarea{
     margin-top:0.5em;
     font-size: medium;
     font-weight: 100;
