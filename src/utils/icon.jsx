@@ -11,7 +11,9 @@ const defaultStyle = {
     width:'3rem',
     height:'3rem',
     marginLeft:'1rem',
-    marginRight:'1rem'
+    marginRight:'1rem',
+    marginBottom:'0.5rem',
+    marginTop:'0.5rem'
 }
 
 export const CPP = (props)=>{

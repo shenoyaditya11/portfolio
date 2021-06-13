@@ -13,6 +13,7 @@ export const Skills = ()=>{
     const iconHolder = {
         display:'flex',
         flexDirection:'row',
+        flexWrap: 'wrap',
         width:'100%',
         paddingLeft:'10%',
         paddingRight:'10%',
@@ -32,13 +33,12 @@ export const Skills = ()=>{
 
 
     return (
-        <div className="background" ref={viewRef}>
+        <div className="background" ref={viewRef} style={{marginTop:'1rem'}}>
                
                     <h2 className='header'>Technical Skills</h2>
                 
                     <motion.section  initial='hidden' animate={animation} variants={staggeredVariant} style={iconHolder}>
-                        <motion.span variants={staggeredVariant} ><JAVA/></motion.span>
-                        
+                        <motion.span variants={popIn} ><JAVA/></motion.span>
                         <motion.span variants={popIn}><CPP/></motion.span>
                         <motion.span variants={popIn}><C/></motion.span>
                         <motion.span variants={popIn}><ANDROID/></motion.span>

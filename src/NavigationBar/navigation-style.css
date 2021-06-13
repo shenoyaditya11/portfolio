@@ -55,12 +55,15 @@
     height: 5vh;
 }
 
-.vertical{
+.vertical-elevated{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 5vh;
-    width:100%
+    left:0;
+    top:5;
+    width:100%;
+    z-index:1;
+    position:fixed;
 
 
 }
@@ -72,9 +75,7 @@
 
 @media only screen and (max-width: 600px) {
     
-    .logo{
-        display: none;
-    }
+ 
 
     .roundedButton{
     

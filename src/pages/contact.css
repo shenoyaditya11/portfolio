@@ -223,6 +223,18 @@ textarea{
 
 @media only screen and (max-width: 600px){
 
+  .contact-icon{
+    font-size: 1.5em;
+    padding-inline-start: 0.5em;
+    padding-inline-end: 0.5em;
+  }
+  
+  .contact-icon:hover{
+    color:#FF9F1C;
+  
+  }
+
+  
   .spaced{
     font-size: 1.3em;
     padding-inline-start: 0.5em;

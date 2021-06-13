@@ -10,6 +10,83 @@ import {navItemVariant, staggeredVariant} from 'utils/varients'
 import { useEffect, useState } from 'react';
 
 
+export const SmScreenNavBar = ()=>{
+
+
+    const [show, setShowing] = useState(false);
+    const url = "https://firebasestorage.googleapis.com/v0/b/sgpalyacasino.appspot.com/o/Aditya_Shenoy_Resume.pdf?alt=media&token=fa63b9d7-190b-460c-ba04-ca715e30f9f5";
+
+
+    const openInNewTab = () => {
+         //console.log("hello");
+         const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+         if (newWindow) newWindow.opener = null
+     }
+
+    const options = 
+    <div className="vertical-elevated" activeKey="home">
+            
+    <div className="navbar-item" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true} to="home" duration={500}>
+        <i  className="fa fa-home icon"></i>Home</Link></div>
+    <div className="navbar-item" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true}  to="about" duration={500}>
+        <i  className="fa fa-user icon"></i>About</Link></div>
+    <div className="navbar-item" variants={navItemVariant}><Link  activeClass="active"className="link" spy={true} smooth={true}  to="work" duration={500}>
+        <i  className="fa fa-laptop icon"></i>Work</Link></div>
+    <div className="navbar-item" variants={navItemVariant}><Link activeClass="active"  className="link" spy={true} smooth={true}  to="contact" duration={500}>  
+        <i className="fa fa-envelope icon"></i>Contact</Link></div>
+    <div className="navbar-item"  variants={navItemVariant}><Link activeClass="active" className="link" smooth={true} spy={true} onClick={()=>{openInNewTab()}}>
+        <i className="fa fa-file icon"></i>Resume</Link></div>
+    </div>
+
+
+    const menuClickHandler=()=>{
+        setShowing(!show);
+    }
+
+    const getIcons=()=>{
+
+        const iconStyle = {
+            color:'#FF9F1C'
+        }
+        return show === false ? ( <i class='fas fa-bars' style={iconStyle}  onClick={()=>menuClickHandler()} ></i>)
+        :
+        (<i class="fas fa-times" style={iconStyle}  onClick={()=>menuClickHandler()}></i>)
+    }
+
+    const getMenu = ()=>{
+            return show === true ? options : <span/>
+    }
+
+   
+    
+
+    return (
+
+        <Navbar className="background elevated">
+        <Navbar.Brand>
+            <div style={{
+                display:'flex',
+                flexDirection:'row',
+                justifyContent:'space-between'
+
+            }}>
+               
+                {
+                getIcons()
+                }
+            </div>
+        </Navbar.Brand>
+            <section >
+               {
+                   getMenu() 
+               }
+            </section>
+        </Navbar>    
+            
+
+    );
+}
+
 export const  Navigation = (props) => {
 
    const { location } = props;
@@ -43,7 +120,7 @@ export const  Navigation = (props) => {
     
       
 
-    return width >= 600 ?(
+    return width >= 600 ? (
         <div>
             <Navbar className="background elevated">
             <Navbar.Brand href="home"><motion.div initial="hidden" animate="visible" variants={navItemVariant}>
@@ -66,30 +143,9 @@ export const  Navigation = (props) => {
             </Navbar>
         </div>
    
-    ): (
-        <div>
-            <Navbar className="background elevated virtical-navbar">
-            <Navbar.Brand href="home"><motion.div initial="hidden" animate="visible" variants={navItemVariant}>
-                <div className="logo" >A</div></motion.div></Navbar.Brand>
-            </Navbar>
-            <motion.div activeKey="home" className="vertical elevated" variants={staggeredVariant}
-                initial="hidden"
-                animate="visible" >
-                
-                <motion.div className="navbar-item" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true} to="home" duration={500}>
-                    <i  className="fa fa-home icon"></i>Home</Link></motion.div>
-                <motion.div className="navbar-item" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true}  to="about" duration={500}>
-                    <i  className="fa fa-user icon"></i>About</Link></motion.div>
-                <motion.div className="navbar-item" variants={navItemVariant}><Link  activeClass="active"className="link" spy={true} smooth={true}  to="work" duration={500}>
-                    <i  className="fa fa-laptop icon"></i>Work</Link></motion.div>
-                <motion.div className="navbar-item" variants={navItemVariant}><Link activeClass="active"  className="link" spy={true} smooth={true}  to="contact" duration={500}>  
-                    <i className="fa fa-envelope icon"></i>Contact</Link></motion.div>
-                <motion.div className="navbar-item"  variants={navItemVariant}><Link activeClass="active" className="link" smooth={true} spy={true} onClick={()=>{openInNewTab()}}>
-                    <i className="fa fa-file icon"></i>Resume</Link></motion.div>
-            </motion.div>
-            
-        </div>
-    );
+    ):(
+        <SmScreenNavBar/>
+    )
 
 };
 
