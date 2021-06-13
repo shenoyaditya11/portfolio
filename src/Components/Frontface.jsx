@@ -36,11 +36,22 @@ export const BackFace =(props)=>{
             </tr>
             <tr>
                 <td>
-                   <span><i class="fab fa-github" aria-hidden="true" onClick={()=>openNewWindow("https://github.com/shenoyaditya11")} > </i></span>
+                    Github:- 
                 </td>
                 <td>
-                    <i class="card-icon fab fa-arrow" aria-hidden="true" onClick={(event)=>openNewWindow(props.project.url, event)} > </i>
+                   <i class="card-icon fab fa-github" aria-hidden="true" onClick={()=>openNewWindow("https://github.com/shenoyaditya11")} > </i>
                 </td>
+            
+            </tr>
+            <tr>
+                <td>
+                    Project link:- 
+                </td>
+                <td>
+                    <i class="card-icon fa fa-link" aria-hidden="true" onClick={(event)=>openNewWindow(props.project.url, event)} > </i>
+                </td>
+                
+               
             </tr>
         </table>
     );

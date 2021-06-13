@@ -6,6 +6,20 @@ import './toast-styles.css'
 
 export const CustomAlert = (props) =>{
 
+    const [show, isShowing] = useState(props.show);
+
+    useEffect(()=>{
+        isShowing(props.show);
+    });
+
+
+    useEffect(()=>{
+        if(show === true){
+            console.log("reached here");
+            setTimeout(props.onClose, 2000);
+        }
+    },[show]);
+
 
     return  props.show === true ? (
         <Alert {...props} style={{
