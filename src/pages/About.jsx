@@ -1,15 +1,13 @@
 import 'utils/styles.css'
 import './about.css'
-import {JAVA, CPP, PYTHON, REACT, ANDROID, ReactComponent } from 'utils/icon'
 import {useInView} from 'react-intersection-observer'
 import {useEffect} from 'react'
 import {leftVariant, rightVariant}  from 'utils/varients'
 import {Skills} from 'Components/skills'
-
 import photo from 'utils/ads.jpg';
 import Image from 'react-bootstrap/Image'
 import {motion, useAnimation} from 'framer-motion'
-import { PHYTHON } from 'utils/icon'
+
 export const About = ()=>{
 
 

@@ -1,8 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Navbar, Nav} from 'react-bootstrap';
-import { HashLink } from 'react-router-hash-link';
+import {Navbar} from 'react-bootstrap';
 import {Link} from 'react-scroll'
-import {withRouter} from 'react-router';
 import './navigation-style.css'
 import 'utils/styles.css'
 import { motion } from 'framer-motion';

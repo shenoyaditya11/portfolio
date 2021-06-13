@@ -1,16 +1,14 @@
-import photo from 'utils/jar.png';
-import Card from 'react-bootstrap/Card';
+
 import { useInView } from 'react-intersection-observer';
 import Spinner from 'react-bootstrap/Spinner';
-import Image from 'react-bootstrap/Image';
 import './work.css';
 import {FlipCard} from 'Components/Flipcards';
 import {FrontFace, BackFace} from 'Components/Frontface'
 import { useEffect, useState } from 'react';
-import {firestore, firebasestorage, googleStore} from 'utils/firebase';
+import {firestore} from 'utils/firebase';
 import { motion, useAnimation } from 'framer-motion';
-import { slideUp,slideUpCard, staggeredVariant} from 'utils/varients';
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import {slideUpCard, staggeredVariant} from 'utils/varients';
+
 
 export const Work = ()=>{
 
