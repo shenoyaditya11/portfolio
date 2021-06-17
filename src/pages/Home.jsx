@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 export const Home = ()=>{
 
  
-    const line1 = ["----QA Enginner at Informatica----", "----Passionate about programming----", "----Fact:- Linux > Windows----"];
+    const line1 = ["<  QA Enginner at Informatica  />   ", "<  Passionate about programming  />     ", "    <  I love playing chess  />     "];
    
     const [displayString, setDisplayString] = useState([]);
     
@@ -26,7 +26,7 @@ export const Home = ()=>{
                         //console.log("done", defination)
                         pointer = (pointer+1)%3;
                         
-                        textAnimator();
+                        setTimeout(textAnimator(),1000);
                     }
                 }>
                 {

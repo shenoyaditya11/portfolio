@@ -23,7 +23,6 @@
     z-index: 1;
     position: fixed;
     margin: 0px;
-    background-color: #202033;
 }
 
 .navbar{
@@ -60,11 +59,11 @@
     flex-direction: column;
     justify-content: center;
     left:0;
-    top:5;
+    top:20;
     width:100%;
     z-index:1;
     position:fixed;
-
+    padding-bottom: 1.5vh;
 
 }
 .navbar-item{
@@ -73,6 +72,10 @@
     justify-content: center;
 }
 
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
 @media only screen and (max-width: 600px) {
     
  
@@ -89,6 +92,8 @@
         padding:0;
         
     }
+
+    
 
     
     

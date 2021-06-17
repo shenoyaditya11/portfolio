@@ -67,6 +67,11 @@ export const slideUpCard = {
   visible: { opacity: 1, y: 0, transition: { type:'spring'},},
 };
 
+export const slideDown = {
+  hidden: { opacity: 0, y: -100 },
+  visible: { opacity: 1, y: 0, transition: { type:'ease-In'},},
+};
+
 export const leftVariant = {
   hidden: { opacity: 0, x: 50},
   visible: {

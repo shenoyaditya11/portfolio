@@ -3,9 +3,11 @@ import {Navbar} from 'react-bootstrap';
 import {Link} from 'react-scroll'
 import './navigation-style.css'
 import 'utils/styles.css'
-import { motion } from 'framer-motion';
+import { motion,useAnimation } from 'framer-motion';
 import {navItemVariant, staggeredVariant} from 'utils/varients'
 import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import {slideDown} from 'utils/varients';
 
 
 export const SmScreenNavBar = ()=>{
@@ -13,6 +15,18 @@ export const SmScreenNavBar = ()=>{
 
     const [show, setShowing] = useState(false);
     const url = "https://firebasestorage.googleapis.com/v0/b/sgpalyacasino.appspot.com/o/Aditya_Shenoy_Resume.pdf?alt=media&token=fa63b9d7-190b-460c-ba04-ca715e30f9f5";
+
+    const animation = useAnimation();
+    const [viewRef, inView] = useInView({
+        threshold: 0.1,
+    });
+
+    useEffect(() => {
+        if (inView) {
+        animation.start('visible');
+        }
+    }, [animation, inView]);
+
 
 
     const openInNewTab = () => {
@@ -22,19 +36,19 @@ export const SmScreenNavBar = ()=>{
      }
 
     const options = 
-    <div className="vertical-elevated" activeKey="home">
+    <motion.div ref={viewRef} className=" background vertical-elevated" activeKey="home" initial="hidden" animate={animation} variants={slideDown}>
             
-    <div className="navbar-item" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true} to="home" duration={500}>
+    <div className="navbar-item background" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true} to="home" duration={500}>
         <i  className="fa fa-home icon"></i>Home</Link></div>
-    <div className="navbar-item" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true}  to="about" duration={500}>
+    <div className="navbar-item background" variants={navItemVariant}><Link activeClass="active" className="link" spy={true} smooth={true}  to="about" duration={500}>
         <i  className="fa fa-user icon"></i>About</Link></div>
-    <div className="navbar-item" variants={navItemVariant}><Link  activeClass="active"className="link" spy={true} smooth={true}  to="work" duration={500}>
+    <div className="navbar-item background" variants={navItemVariant}><Link  activeClass="active"className="link" spy={true} smooth={true}  to="work" duration={500}>
         <i  className="fa fa-laptop icon"></i>Work</Link></div>
-    <div className="navbar-item" variants={navItemVariant}><Link activeClass="active"  className="link" spy={true} smooth={true}  to="contact" duration={500}>  
+    <div className="navbar-item background" variants={navItemVariant}><Link activeClass="active"  className="link" spy={true} smooth={true}  to="contact" duration={500}>  
         <i className="fa fa-envelope icon"></i>Contact</Link></div>
-    <div className="navbar-item"  variants={navItemVariant}><Link activeClass="active" className="link" smooth={true} spy={true} onClick={()=>{openInNewTab()}}>
+    <div className="navbar-item background"  variants={navItemVariant}><Link activeClass="active" className="link" smooth={true} spy={true} onClick={()=>{openInNewTab()}}>
         <i className="fa fa-file icon"></i>Resume</Link></div>
-    </div>
+    </motion.div>
 
 
     const menuClickHandler=()=>{
@@ -60,19 +74,13 @@ export const SmScreenNavBar = ()=>{
 
     return (
 
-        <Navbar className="background elevated">
-        <Navbar.Brand>
-            <div style={{
-                display:'flex',
-                flexDirection:'row',
-                justifyContent:'space-between'
-
-            }}>
+        <Navbar className="background elevated flex-col">
+        <Navbar.Brand className="background" style={{width:'100%', display:'flex', justifyContent:'start'}}>
                
                 {
                 getIcons()
                 }
-            </div>
+            
         </Navbar.Brand>
             <section >
                {
