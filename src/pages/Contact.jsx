@@ -90,9 +90,7 @@ export const Contact = ()=>{
              onHide = {()=> isSubmitting(false)}
             />
             
-            <CustomAlert show={error} variant="danger" onClose={() => setError(false)} dismissible>
-
-            </CustomAlert>
+            
                 
                   
             
@@ -151,6 +149,9 @@ export const Contact = ()=>{
             
             </div>
            
+            <CustomAlert show={error} variant="danger" onClose={() => setError(false)} dismissible>
+
+            </CustomAlert>
            
         </div>
     );

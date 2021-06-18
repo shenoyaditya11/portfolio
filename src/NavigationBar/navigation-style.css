@@ -75,6 +75,7 @@
 .flex-col{
     display: flex;
     flex-direction: column;
+
 }
 @media only screen and (max-width: 600px) {
     
@@ -93,6 +94,12 @@
         
     }
 
+    .flex-col{
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding:0.25em 1em
+    }
     
 
     

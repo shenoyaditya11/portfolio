@@ -23,7 +23,11 @@ export const CustomAlert = (props) =>{
 
     return  props.show === true ? (
         <Alert {...props} style={{
-            zIndex:10
+            zIndex:10,
+            position:'fixed',
+            bottom:0,
+            width:'100%'
+
         }}>
             <Alert.Heading>Oh snap! You got an error!</Alert.Heading>
             <p style={{
