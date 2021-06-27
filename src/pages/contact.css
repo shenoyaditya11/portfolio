@@ -223,6 +223,15 @@ textarea{
 
 @media only screen and (max-width: 600px){
 
+
+  .body{
+    display: flex;
+    width: 100%;
+    padding-top: 2em;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  
   .contact-icon{
     font-size: 1.5em;
     padding-inline-start: 0.5em;
@@ -246,6 +255,11 @@ textarea{
     padding-right: 1em;
     padding-left: 1em;
     margin:0;
+  }
+
+  .form-container{
+    margin-top: 0;
+    margin-bottom: 2em;
   }
 
   input, textarea{
