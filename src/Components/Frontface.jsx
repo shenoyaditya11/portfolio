@@ -39,7 +39,7 @@ export const BackFace =(props)=>{
                     Github:- 
                 </td>
                 <td>
-                   <i class="card-icon fab fa-github" aria-hidden="true" onClick={()=>openNewWindow(props.project.git, event)} > </i>
+                   <i class="card-icon fab fa-github" aria-hidden="true" onClick={(event)=>openNewWindow(props.project.git, event)} > </i>
                 </td>
             
             </tr>
